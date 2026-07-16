@@ -5,9 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | King's Daughters Africa</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navbar -->
+  <header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/LOGO.jpeg" alt="King's Daughters Africa Logo">
+      </a>
+      <h2>King's Daughters Africa</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="mentorship.html">Mentorship</a></li>
+      <li><a href="conferences.html">Conferences</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
   <!-- Hero Banner -->
   <section class="hero contact-hero">
     <div class="hero-text">
@@ -17,10 +38,10 @@
   </section>
 
   <!-- Contact Info -->
-  <section class="contact-info">
-    <h2>Get in Touch</h2>
-    <p>Email: info@kingsdaughtersafrica.org</p>
-    <p>Phone: +254 700 000 000</p>
+  <section class="section contact-info container center">
+    <h2 class="section-title">Get in Touch</h2>
+    <p>Email: <strong>info@kingsdaughtersafrica.org</strong></p>
+    <p>Phone: <strong>+254 700 000 000</strong></p>
     <p>Follow us on social media:</p>
     <div class="social-links">
       <a href="#">Facebook</a>
@@ -30,14 +51,22 @@
   </section>
 
   <!-- Contact Form -->
-  <section class="contact-form">
-    <h2>Send a Message</h2>
-    <form action="https://formsubmit.co/YOUR_EMAIL" method="POST">
-      <input type="text" name="name" placeholder="Full Name" required>
-      <input type="email" name="email" placeholder="Email Address" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send</button>
-    </form>
+  <section class="section contact-form light">
+    <div class="container center">
+      <h2 class="section-title">Send a Message</h2>
+      <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="form-box">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn btn-gold">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <p>"Partner with us in advancing the Kingdom of God across Africa."</p>
+    <a href="mentorship.html" class="btn btn-gold">Explore Mentorship</a>
   </section>
 
   <footer>

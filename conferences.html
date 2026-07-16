@@ -5,9 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conferences | King's Daughters Africa</title>
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navbar -->
+  <header>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/LOGO.jpeg" alt="King's Daughters Africa Logo">
+      </a>
+      <h2>King's Daughters Africa</h2>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="mentorship.html">Mentorship</a></li>
+      <li><a href="conferences.html">Conferences</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
   <!-- Hero Banner -->
   <section class="hero conferences-hero">
     <div class="hero-text">
@@ -16,26 +37,26 @@
     </div>
   </section>
 
-  <!-- Conference History -->
-  <section class="conference-history">
-    <h2>Past Conferences</h2>
-    <div class="conference-grid">
-      <div class="conference-card">
+  <!-- Past Conferences -->
+  <section class="section conference-history container">
+    <h2 class="section-title">Past Conferences</h2>
+    <div class="grid-4">
+      <div class="card">
         <img src="images/tanzania2022.jpg" alt="Tanzania 2022 Conference">
         <h3>Tanzania (2022)</h3>
         <p>First Pan-African gathering of King's Daughters.</p>
       </div>
-      <div class="conference-card">
+      <div class="card">
         <img src="images/kenya2023.jpg" alt="Kenya 2023 Conference">
         <h3>Kenya (2023)</h3>
         <p>Strengthening ministers' wives and women leaders.</p>
       </div>
-      <div class="conference-card">
+      <div class="card">
         <img src="images/southafrica2024.jpg" alt="South Africa 2024 Conference">
         <h3>South Africa (2024)</h3>
         <p>Empowering women ministers through discipleship.</p>
       </div>
-      <div class="conference-card">
+      <div class="card">
         <img src="images/uganda2025.jpg" alt="Uganda 2025 Conference">
         <h3>Uganda (2025)</h3>
         <p>Mobilizing women as agents of revival.</p>
@@ -44,9 +65,17 @@
   </section>
 
   <!-- Future Vision -->
-  <section class="future-vision">
-    <h2>Future Vision</h2>
-    <p>King's Daughters Africa envisions reaching every nation across the continent, raising women leaders who advance the Kingdom of God.</p>
+  <section class="section future-vision light">
+    <div class="container center">
+      <h2>Future Vision</h2>
+      <p>King's Daughters Africa envisions reaching every nation across the continent, raising women leaders who advance the Kingdom of God.</p>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <p>"Join us in shaping the future of women’s ministry across Africa."</p>
+    <a href="contact.html" class="btn btn-gold">Get Involved</a>
   </section>
 
   <footer>

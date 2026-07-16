@@ -1,15 +1,15 @@
 /* ===========================================
    King's Daughters Africa - style.css
-   Royal elegance: gold primary, deep purple accents
+   Royal Gold primary, Deep Purple accents
 =========================================== */
 
 :root {
   --black: #1a1a1a;         
-  --gold: #e6c76d;          
+  --gold: #e6c76d;          /* Royal Gold primary */
   --cream: #fdfdf9;         
   --grey: #f4f4f4;          
   --muted: #777;
-  --purple: #2E0854;        /* Deep Royal Purple */
+  --purple: #2E0854;        /* Deep Royal Purple accent */
 
   --radius: 14px;
   --shadow: 0 10px 24px rgba(0,0,0,0.12);
@@ -49,45 +49,45 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
   position: fixed; top: 0; left: 0; width: 100%;
   display: flex; justify-content: space-between; align-items: center;
   padding: 18px 5%;
-  background: rgba(46,8,84,0.95); /* Deep Purple with transparency */
+  background: var(--gold); /* Gold primary */
   backdrop-filter: blur(10px);
   z-index: 999;
   transition: background var(--transition), box-shadow var(--transition);
 }
 
 .logo h2 {
-  color: var(--gold);
+  color: var(--black);
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 1.4rem;
 }
 
 .nav-links { display: flex; gap: 34px; list-style: none; }
-.nav-links a { color: var(--cream); font-weight: 500; }
-.nav-links a:hover, .nav-links .active { color: var(--gold); }
+.nav-links a { color: var(--black); font-weight: 500; }
+.nav-links a:hover, .nav-links .active { color: var(--purple); }
 
 /* ==============================
    Hero Section
 ============================== */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(rgba(46,8,84,0.75), rgba(46,8,84,0.75)),
+  background: linear-gradient(rgba(230,199,109,0.85), rgba(230,199,109,0.85)),
     url('../images/hero.jpg') center/cover no-repeat;
   display: grid; place-items: center;
-  text-align: center; color: var(--cream);
+  text-align: center; color: var(--black);
   padding: 150px 20px;
 }
 
 .hero h1 {
   font-size: clamp(2.2rem, 5vw, 3.8rem);
   max-width: 900px; margin: auto;
-  color: var(--gold);
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+  color: var(--purple); /* Purple accent */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
 }
 
 .hero p {
   max-width: 760px; margin: 35px auto;
-  font-size: 1.05rem; color: #f0f0e6;
+  font-size: 1.05rem; color: var(--black);
 }
 
 .hero-buttons {
@@ -178,16 +178,16 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
    Footer
 ============================== */
 footer {
-  background: var(--black);
-  color: var(--cream);
+  background: var(--gold);
+  color: var(--black);
   padding: 80px 5% 35px;
 }
-footer h3 { color: var(--gold); margin-bottom: 22px; }
-footer a { color: var(--cream); transition: color var(--transition); }
-footer a:hover { color: var(--gold); }
+footer h3 { color: var(--purple); margin-bottom: 22px; }
+footer a { color: var(--black); transition: color var(--transition); }
+footer a:hover { color: var(--purple); }
 .copyright {
   text-align: center;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(0,0,0,0.1);
   margin-top: 45px; padding-top: 28px;
   font-size: 0.9rem;
 }

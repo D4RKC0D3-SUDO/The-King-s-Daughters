@@ -10,24 +10,23 @@
 <body>
   <!-- Navbar -->
   <header>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/LOGO.jpeg" alt="King's Daughters Africa Logo">
-      </a>
-      <h2>King's Daughters Africa</h2>
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About</a></li>
-      <li><a href="mentorship.html">Mentorship</a></li>
-      <li><a href="conferences.html">Conferences</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img src="images/LOGO.jpeg" alt="King's Daughters Africa Logo">
+        </a>
+        <h2>King's Daughters Africa</h2>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="mentorship.html" class="active">Mentorship</a></li>
+        <li><a href="conferences.html">Conferences</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <!-- Hero Banner -->
   <section class="hero mentorship-hero">
@@ -77,11 +76,15 @@
   <section class="section registration light">
     <div class="container center">
       <h2 class="section-title">Register Now</h2>
-      <form action="https://formsubmit.co/YOUR_EMAIL" method="POST" class="form-box">
+      <form action="https://formsubmit.co/ndukieunice01@gmail.com" method="POST" class="form-box">
         <input type="text" name="name" placeholder="Full Name" required>
         <input type="email" name="email" placeholder="Email Address" required>
         <input type="text" name="country" placeholder="Country" required>
         <textarea name="message" placeholder="Tell us why you want to join" required></textarea>
+
+        <!-- Redirect to thankyou.html after submission -->
+        <input type="hidden" name="_next" value="https://d4rkc0d3-sudo.github.io/The-King-s-Daughters/thankyou.html">
+
         <button type="submit" class="btn btn-gold">Submit Registration</button>
       </form>
     </div>

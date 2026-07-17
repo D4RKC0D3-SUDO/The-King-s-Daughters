@@ -1,4 +1,6 @@
-// Improved Lightbox functionality
+// ==============================
+// Lightbox Functionality
+// ==============================
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.getElementById("lightbox-img");
 const captionText = document.getElementById("caption");
@@ -10,7 +12,7 @@ let currentIndex = -1;
 // Open lightbox
 function openLightbox(index) {
   const img = galleryImages[index];
-  lightbox.style.display = "block";
+  lightbox.style.display = "flex"; // use flex for centering
   lightbox.classList.add("fade-in");
   lightboxImg.src = img.src;
   captionText.innerHTML = img.alt;
@@ -45,17 +47,24 @@ galleryImages.forEach((img, index) => {
 closeBtn.onclick = closeLightbox;
 
 // Close when clicking outside image
-window.onclick = function(event) {
+window.addEventListener("click", (event) => {
   if (event.target === lightbox) {
     closeLightbox();
   }
-};
+});
 
 // Keyboard navigation
 document.addEventListener("keydown", (event) => {
-  if (lightbox.style.display === "block") {
+  if (lightbox.style.display === "flex") {
     if (event.key === "Escape") closeLightbox();
     if (event.key === "ArrowRight") showNext();
     if (event.key === "ArrowLeft") showPrev();
   }
 });
+
+// ==============================
+// Mobile Navbar Toggle
+// ==============================
+function toggleMenu() {
+  document.querySelector('.nav-links').classList.toggle('active');
+}

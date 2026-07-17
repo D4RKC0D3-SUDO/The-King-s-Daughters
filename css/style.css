@@ -3,12 +3,16 @@
    Refined elegance: plum, blush, pearl, antique gold
 =========================================== */
 
+/* ===========================================
+   Global Styles & Navbar (Refined)
+=========================================== */
+
 :root {
   --plum: #4b2e4a;          /* deep regal plum base */
   --blush: #f2d7d9;         /* soft blush accent */
   --pearl: #fdfdfd;         /* clean pearl white background */
   --antique-gold: #c5a46d;  /* muted antique gold highlight */
-  --smoke: #7a7a7a;         /* soft neutral gray */
+  --smoke: #6e6e6e;         /* softer neutral gray */
 
   --radius: 12px;
   --shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -17,6 +21,8 @@
   --heading-size: clamp(2rem, 4vw, 3rem);
   --subheading-size: clamp(1.4rem, 2.5vw, 2rem);
   --body-size: 1rem;
+
+  --gradient-bg: linear-gradient(180deg, var(--pearl) 0%, var(--blush) 100%);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -47,11 +53,14 @@ h3 { font-size: 1.2rem; }
 /* Links */
 a {
   text-decoration: none;
-  transition: color var(--transition), text-shadow var(--transition);
+  transition: color var(--transition), background var(--transition), text-shadow var(--transition);
 }
 a:hover {
-  color: var(--antique-gold);
-  text-shadow: 0 0 6px rgba(197,164,109,0.5);
+  color: #000; /* black text */
+  background: var(--blush); /* soft blush highlight */
+  border-radius: 6px;
+  padding: 4px 10px;
+  text-shadow: none;
 }
 
 /* Images */
@@ -126,13 +135,14 @@ img:hover {
   color: var(--pearl);
   font-weight: 500;
   position: relative;
-  padding-bottom: 4px;
-  transition: color var(--transition);
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: all var(--transition);
 }
 .nav-links a::after {
   content: "";
   position: absolute;
-  left: 0; bottom: 0;
+  left: 0; bottom: -2px;
   width: 0%; height: 2px;
   background: var(--antique-gold);
   transition: width var(--transition);
@@ -141,10 +151,14 @@ img:hover {
 .nav-links .active::after {
   width: 100%;
 }
-.nav-links a:hover,
+.nav-links a:hover {
+  background: var(--blush);
+  color: #000; /* black text on hover */
+}
 .nav-links .active {
   color: var(--antique-gold);
 }
+
 
 /* ==============================
    Hero Section
@@ -183,13 +197,13 @@ img:hover {
    Buttons
 ============================== */
 .btn {
-  padding: 14px 34px; /* increased padding for better spacing */
+  padding: 9px 24px; /* increased padding for better spacing */
   border-radius: 999px;
   font-weight: 600;
   transition: all var(--transition);
-  letter-spacing: 0.6px;
+  letter-spacing: 1px;
   margin: 12px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   cursor: pointer;
 }
 
@@ -287,52 +301,51 @@ img:hover {
 
 
 /* ==============================
-   Gallery
+   Gallery (Refined Sizing)
 ============================== */
 .gallery-grid {
-  padding: 4rem 2rem;
+  padding: 3rem 2rem;
   text-align: center;
   background: linear-gradient(180deg, var(--pearl) 0%, #f8f3f5 100%);
 }
 .gallery-grid h2 {
   font-family: "Playfair Display", serif;
-  font-size: 2.4rem;
+  font-size: 2rem; /* smaller heading */
   color: var(--plum);
-  margin-bottom: 2.5rem;
-  text-shadow: 1px 1px 4px rgba(75,46,74,0.15);
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(75,46,74,0.1);
 }
 .gallery-grid .grid-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* reduced min size */
+  gap: 1.5rem; /* tighter spacing */
 }
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: 10px;
 }
 .gallery-item img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.5s ease, box-shadow 0.5s ease;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 .gallery-item::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(75,46,74,0.5), transparent);
+  background: linear-gradient(to top, rgba(75,46,74,0.4), transparent);
   opacity: 0;
-  transition: opacity 0.4s ease;
+  transition: opacity 0.3s ease;
 }
-.gallery-item:hover::after {
-  opacity: 1;
-}
+.gallery-item:hover::after { opacity: 1; }
 .gallery-item img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(75,46,74,0.4);
+  transform: scale(1.05); /* gentler zoom */
+  box-shadow: 0 6px 14px rgba(75,46,74,0.3);
 }
+
 
 /* ==============================
    Lightbox

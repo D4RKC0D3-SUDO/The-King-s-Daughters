@@ -226,8 +226,9 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
   resize: vertical;
 }
 
+
 /* ==============================
-   Responsive Navbar + Hamburger (Refined)
+   Responsive Navbar + Hamburger (Fixed)
 ============================== */
 .hamburger {
   display: none;
@@ -243,9 +244,16 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 5%;
-    height: 60px; /* compact height */
+    padding: 10px 5%;
+    height: 58px; /* compact height */
     background: linear-gradient(180deg, var(--plum) 0%, #3a1f3a 100%);
+  }
+
+  .logo h2 {
+    font-size: 1rem;          /* smaller but visible */
+    white-space: nowrap;      /* keeps "King's Daughters Africa" together */
+    overflow: hidden;         /* prevents text spill */
+    text-overflow: ellipsis;  /* adds ... if too long */
   }
 
   .hamburger {
@@ -254,13 +262,12 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 
   .nav-links {
     position: absolute;
-    top: 60px; /* sits just below navbar */
-    left: 0;
+    top: 58px; left: 0;
     width: 100%;
     background: rgba(75,46,74,0.95); /* semi-transparent plum */
     flex-direction: column;
     gap: 0.8rem;
-    padding: 15px 0;
+    padding: 12px 0;
     display: none; /* hidden by default */
     text-align: center;
     border-radius: 0 0 12px 12px;
@@ -274,7 +281,7 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
   }
 
   .nav-links a {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     padding: 8px 0;
     color: var(--pearl);
     transition: color 0.3s ease;
@@ -297,6 +304,7 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
   .two-column, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .gallery-grid .grid-4 { grid-template-columns: 1fr; }
 }
+
 
 /* ==============================
    Gallery

@@ -228,7 +228,7 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 
 
 /* ==============================
-   Responsive Navbar + Hamburger (Fixed)
+   Responsive Navbar + Hamburger (Final Fixed)
 ============================== */
 .hamburger {
   display: none;
@@ -260,18 +260,19 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
     display: block; /* show hamburger on mobile */
   }
 
+  /* Mobile dropdown menu */
   .nav-links {
     position: absolute;
-    top: 58px; left: 0;
-    width: 100%;
+    top: 58px; right: 20px;
+    width: 240px;
     background: rgba(75,46,74,0.95); /* semi-transparent plum */
     flex-direction: column;
     gap: 0.8rem;
-    padding: 12px 0;
+    padding: 20px;
     display: none; /* hidden by default */
-    text-align: center;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    text-align: left;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
     z-index: 998;
   }
 
@@ -304,6 +305,7 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
   .two-column, .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .gallery-grid .grid-4 { grid-template-columns: 1fr; }
 }
+
 
 
 /* ==============================

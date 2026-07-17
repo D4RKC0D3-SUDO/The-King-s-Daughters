@@ -2,7 +2,6 @@
    King's Daughters Africa - Global Styles
    Refined elegance: plum, blush, pearl, antique gold
 =========================================== */
-
 /* ===========================================
    Global Styles & Navbar (Refined)
 =========================================== */
@@ -15,8 +14,8 @@
   --smoke: #6e6e6e;         /* softer neutral gray */
 
   --radius: 12px;
-  --shadow: 0 8px 20px rgba(0,0,0,0.15);
-  --transition: 0.3s ease;
+  --shadow: 0 6px 16px rgba(0,0,0,0.12); /* softened shadow */
+  --transition: 0.35s ease; /* smoother transitions */
 
   --heading-size: clamp(2rem, 4vw, 3rem);
   --subheading-size: clamp(1.4rem, 2.5vw, 2rem);
@@ -44,7 +43,7 @@ h1, h2, h3 {
   font-weight: 600;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
-  text-shadow: 0 1px 3px rgba(75,46,74,0.15);
+  text-shadow: 0 1px 3px rgba(75,46,74,0.12);
 }
 h1 { font-size: var(--heading-size); }
 h2 { font-size: var(--subheading-size); }
@@ -63,7 +62,7 @@ a:hover {
   text-shadow: none;
 }
 
-/* Images */
+/* Images (Global + About/Conferences fix) */
 img {
   max-width: 100%;
   display: block;
@@ -73,7 +72,15 @@ img {
 }
 img:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+}
+
+/* Restrict About & Conferences images */
+.about img,
+.conferences img {
+  max-width: 320px; /* same size as largest gallery item */
+  margin: 0 auto;
+  height: auto;
 }
 
 /* Layout Helpers */
@@ -159,92 +166,24 @@ img:hover {
   color: var(--antique-gold);
 }
 
-
 /* ==============================
-   Hero Section
-============================== */
-.hero {
-  min-height: 100vh;
-  background: linear-gradient(rgba(75,46,74,0.7), rgba(75,46,74,0.7)),
-    url('../images/hero.jpg') center/cover no-repeat;
-  display: grid; place-items: center;
-  text-align: center; color: var(--pearl);
-  padding: 160px 20px;
-  animation: fadeIn 1.2s ease;
-}
-
-.hero h1 {
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
-  max-width: 900px; margin: auto;
-  color: var(--antique-gold);
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-  animation: slideUp 1s ease;
-}
-
-.hero p {
-  max-width: 760px; margin: 35px auto;
-  font-size: 1.15rem; color: var(--blush);
-  animation: slideUp 1.4s ease;
-}
-
-.hero-buttons {
-  display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;
-  margin-top: 50px;
-  animation: slideUp 1.8s ease;
-}
-
-/* ==============================
-   Buttons
-============================== */
-.btn {
-  padding: 9px 24px; /* increased padding for better spacing */
-  border-radius: 999px;
-  font-weight: 600;
-  transition: all var(--transition);
-  letter-spacing: 1px;
-  margin: 12px;
-  font-size: 0.88rem;
-  cursor: pointer;
-}
-
-.btn-gold {
-  background: var(--antique-gold);
-  color: var(--plum);
-  box-shadow: 0 4px 12px rgba(197,164,109,0.4);
-}
-.btn-gold:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 6px 18px rgba(197,164,109,0.6);
-}
-
-.btn-outline {
-  border: 2px solid var(--blush);
-  color: var(--plum);
-  background: transparent;
-}
-.btn-outline:hover {
-  background: var(--blush);
-  color: var(--plum);
-  box-shadow: 0 4px 12px rgba(242,215,217,0.5);
-}
-
-/* ==============================
-   Cards
+   Cards (Smoother Hover)
 ============================== */
 .card {
   background: var(--pearl);
-  padding: 36px;
+  padding: 32px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  transition: all var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition);
   text-align: center;
 }
 .card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 10px 24px rgba(75,46,74,0.25);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 18px rgba(75,46,74,0.18); /* softer shadow */
 }
 .card h3 { color: var(--plum); }
 .card p { color: var(--smoke); }
+
 
 /* ==============================
    Forms

@@ -1,15 +1,15 @@
 /* ===========================================
    King's Daughters Africa - style.css
-   Elevated luxury: champagne gold, ivory, charcoal, royal blue
+   Elevated elegance: plum, blush, pearl, antique gold
    With refined animations, forms, and lightbox
 =========================================== */
 
 :root {
-  --charcoal: #1c1c1c;       /* deep neutral base */
-  --ivory: #faf9f6;          /* warm background */
-  --champagne: #d4af37;      /* refined gold accent */
-  --royalblue: #2a3d66;      /* muted royal blue highlight */
-  --muted: #6c6c6c;
+  --plum: #4b2e4a;          /* deep regal plum base */
+  --blush: #f2d7d9;         /* soft blush accent */
+  --pearl: #fdfdfd;         /* clean pearl white background */
+  --antique-gold: #c5a46d;  /* muted antique gold highlight */
+  --smoke: #7a7a7a;         /* soft neutral gray */
 
   --radius: 12px;
   --shadow: 0 8px 20px rgba(0,0,0,0.15);
@@ -21,15 +21,15 @@ html { scroll-behavior: smooth; }
 
 body {
   font-family: "Poppins", sans-serif;
-  background: var(--ivory);
-  color: var(--charcoal);
+  background: var(--pearl);
+  color: var(--plum);
   line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3 {
   font-family: "Playfair Display", serif;
-  color: var(--charcoal);
+  color: var(--plum);
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -48,53 +48,43 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
   position: fixed; top: 0; left: 0; width: 100%;
   display: flex; justify-content: space-between; align-items: center;
   padding: 18px 5%;
-  background: var(--charcoal);
+  background: var(--plum);
   backdrop-filter: blur(8px);
   z-index: 999;
   transition: background var(--transition), box-shadow var(--transition);
 }
 .navbar.scrolled { box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
 
-.logo h2 {
-  color: var(--champagne);
-  font-weight: 700;
-  letter-spacing: 1px;
-  font-size: 1.5rem;
-}
-
-.nav-links { display: flex; gap: 30px; list-style: none; }
-.nav-links a { color: var(--ivory); font-weight: 500; }
-.nav-links a:hover, .nav-links .active { color: var(--champagne); }
-
-
 .logo {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-
 .logo img {
-  height: 52px;   /* consultancy spec */
+  height: 52px;
   width: auto;
   display: block;
 }
-
 .logo h2 {
-  color: var(--champagne);
+  color: var(--antique-gold);
   font-weight: 700;
   letter-spacing: 1px;
   font-size: 1.4rem;
 }
+
+.nav-links { display: flex; gap: 30px; list-style: none; }
+.nav-links a { color: var(--pearl); font-weight: 500; }
+.nav-links a:hover, .nav-links .active { color: var(--antique-gold); }
 
 /* ==============================
    Hero Section
 ============================== */
 .hero {
   min-height: 100vh;
-  background: linear-gradient(rgba(28,28,28,0.7), rgba(28,28,28,0.7)),
+  background: linear-gradient(rgba(75,46,74,0.7), rgba(75,46,74,0.7)),
     url('../images/hero.jpg') center/cover no-repeat;
   display: grid; place-items: center;
-  text-align: center; color: var(--ivory);
+  text-align: center; color: var(--pearl);
   padding: 140px 20px;
   animation: fadeIn 1.2s ease;
 }
@@ -102,14 +92,14 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 .hero h1 {
   font-size: clamp(2.4rem, 5vw, 4rem);
   max-width: 900px; margin: auto;
-  color: var(--champagne);
+  color: var(--antique-gold);
   text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
   animation: slideUp 1s ease;
 }
 
 .hero p {
   max-width: 760px; margin: 30px auto;
-  font-size: 1.1rem; color: #eaeaea;
+  font-size: 1.1rem; color: var(--blush);
   animation: slideUp 1.4s ease;
 }
 
@@ -134,8 +124,8 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 }
 
 .btn-gold {
-  background: var(--champagne);
-  color: var(--charcoal);
+  background: var(--antique-gold);
+  color: var(--plum);
 }
 .btn-gold:hover {
   transform: translateY(-3px) scale(1.05);
@@ -143,19 +133,19 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 }
 
 .btn-outline {
-  border: 2px solid var(--royalblue);
-  color: var(--royalblue);
+  border: 2px solid var(--blush);
+  color: var(--plum);
 }
 .btn-outline:hover {
-  background: var(--royalblue);
-  color: var(--ivory);
+  background: var(--blush);
+  color: var(--plum);
 }
 
 /* ==============================
    Cards
 ============================== */
 .card {
-  background: var(--ivory);
+  background: var(--pearl);
   padding: 32px;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -163,8 +153,8 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
   text-align: center;
 }
 .card:hover { transform: translateY(-6px) scale(1.02); }
-.card h3 { color: var(--royalblue); }
-.card p { color: var(--muted); }
+.card h3 { color: var(--plum); }
+.card p { color: var(--smoke); }
 
 /* ==============================
    Forms
@@ -188,8 +178,8 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 }
 .form-box input:focus,
 .form-box textarea:focus {
-  border-color: var(--champagne);
-  box-shadow: 0 0 8px rgba(212,175,55,0.4);
+  border-color: var(--blush);
+  box-shadow: 0 0 8px rgba(242,215,217,0.6);
   outline: none;
 }
 .form-box textarea {
@@ -207,7 +197,7 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 .gallery-grid h2 {
   font-family: "Playfair Display", serif;
   font-size: 2rem;
-  color: var(--royalblue);
+  color: var(--plum);
   margin-bottom: 2rem;
 }
 .gallery-grid .grid-4 {
@@ -224,15 +214,17 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 }
 .gallery-item img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 16px rgba(75,46,74,0.4);
 }
 
-/* Lightbox */
+/* ==============================
+   Lightbox
+============================== */
 .lightbox {
   display: none;
   position: fixed; z-index: 1000;
   left: 0; top: 0; width: 100%; height: 100%;
-  background: rgba(0,0,0,0.9);
+  background: rgba(75,46,74,0.9); /* plum overlay */
   justify-content: center; align-items: center;
   opacity: 0; transition: opacity 0.3s ease;
 }
@@ -244,13 +236,13 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 }
 .close {
   position: absolute; top: 20px; right: 30px;
-  color: var(--champagne);
+  color: var(--antique-gold);
   font-size: 2rem; cursor: pointer;
   transition: color var(--transition);
 }
-.close:hover { color: var(--ivory); }
+.close:hover { color: var(--blush); }
 #caption {
-  margin-top: 15px; color: var(--ivory);
+  margin-top: 15px; color: var(--pearl);
   font-size: 1rem; text-align: center;
 }
 
@@ -259,30 +251,34 @@ img { max-width: 100%; display: block; border-radius: var(--radius); }
 ============================== */
 .cta {
   padding: 80px 20px;
-  background: var(--charcoal);
-  color: var(--ivory);
+  background: var(--plum);
+  color: var(--pearl);
   text-align: center;
 }
 .cta p { font-size: 1.2rem; margin-bottom: 20px; }
-.cta .btn { margin-top: 10px; }
+.cta .btn {
+  margin-top: 10px;
+  background: var(--antique-gold);
+  color: var(--plum);
+}
 
 /* ==============================
    Footer
 ============================== */
 footer {
-  background: var(--charcoal);
-  color: var(--ivory);
+  background: var(--plum);
+  color: var(--pearl);
   padding: 70px 5% 30px;
 }
-footer h3 { color: var(--champagne); margin-bottom: 20px; }
-footer a { color: var(--ivory); transition: color var(--transition); }
-footer a:hover { color: var(--champagne); }
+footer h3 { color: var(--antique-gold); margin-bottom: 20px; }
+footer a { color: var(--pearl); transition: color var(--transition); }
+footer a:hover { color: var(--blush); }
 .copyright {
   text-align: center;
   border-top: 1px solid rgba(255,255,255,0.1);
   margin-top: 40px; padding-top: 25px;
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--smoke);
 }
 
 /* ==============================
@@ -325,7 +321,7 @@ footer a:hover { color: var(--champagne); }
   text-align: center;
   margin-bottom: 55px;
   font-size: 2.2rem;
-  color: var(--charcoal);
+  color: var(--plum);
 }
 
 /* ==============================
@@ -338,12 +334,12 @@ footer a:hover { color: var(--champagne); }
   margin-top: 15px;
 }
 .social-links a {
-  color: var(--royalblue);
+  color: var(--blush);
   font-weight: 500;
   transition: color var(--transition);
 }
 .social-links a:hover {
-  color: var(--champagne);
+  color: var(--antique-gold);
 }
 
 /* ==============================
